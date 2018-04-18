@@ -1,4 +1,4 @@
-function TS_plot_2d(featureData,TimeSeries,featureLabels,groupNames,annotateParams,showDistr,whatClassifier)
+function [Mdl] = TS_plot_2d(featureData,TimeSeries,featureLabels,groupNames,annotateParams,showDistr,whatClassifier)
 % TS_plot_2d   Plots a dataset in a two-dimensional space.
 %
 % e.g., The space of two chosen features, or two principal components.

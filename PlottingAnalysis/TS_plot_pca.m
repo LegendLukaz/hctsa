@@ -1,4 +1,4 @@
-function TS_plot_pca(whatData,showDist,classMeth,annotateParams)
+function [classifier_mdl] = TS_plot_pca(whatData,showDist,classMeth,annotateParams)
 % TS_plot_pca   2-dimensional feature-based representation of a time-series dataset.
 %
 % The low-dimensional representation is computed using PCA.
@@ -122,6 +122,6 @@ for i = 1:2
     featureLabels{i} = sprintf('%s %u (%.2f%% var)',nameString,i,percVar(i));
 end
 
-TS_plot_2d(pcScore(:,1:2),TimeSeries,featureLabels,groupNames,annotateParams,showDist,classMeth)
+[classifier_mdl] = TS_plot_2d(pcScore(:,1:2),TimeSeries,featureLabels,groupNames,annotateParams,showDist,classMeth)
 
 end

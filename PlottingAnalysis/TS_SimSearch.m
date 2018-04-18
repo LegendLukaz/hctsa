@@ -281,7 +281,7 @@ if any(ismember('matrix',whatPlots))
         NormMinMax = @(x) (x-min(x))/(max(x)-min(x));
         for j = 1:numNeighbors+1
             tsData = dataStruct(neighborInd(ord(j))).Data(1:end);
-            lengthHere = min(tsLength,length(tsData));
+            lengthHere = length(tsData);
             plot(1:lengthHere,j-0.5+NormMinMax(tsData),'-k');
             if j < numNeighbors+1
                 plot([1,tsLength],(j+0.5)*ones(2,1),':k')
